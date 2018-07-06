@@ -1,0 +1,115 @@
+Why angular  -
+  google support
+  ts support
+  Modular approach
+  seperation of concern
+--------------------------------
+Shadow DOM in HTML 5 - encapsulates data
+------------------------------------
+Why TS
+ Microsoft extension for JS
+ OOPs features
+ ES6+features
+ Type Def
+--------------------------------------
+TS features
+  classes &  inheritance
+  Module system
+  Arrow functions
+  Template string
+  constant and block scopes
+---------------------------
+
+ 1. Template string features
+ 2. Block scoping  (let and var)
+ 3. Destructing objects & arrays (restructing functions and variables)
+ 4. Rest and Spread operators 
+ 5. Arrow funtions
+ 6. classes
+ 7. Module system (exporting and importing)
+
+ package.json - defines the dependenices of the project
+// ng serve --port number (default port number : 4200)
+angular_cli.json
+
+8.Building blocks (,)
+   declarations (components,pipes,directives)
+   imports (modules)
+   providers(Service)
+   bootstrap(root)
+
+9.Flow :
+index.html -> Main.ts -> AppModule -> Appcomponent-> template
+Module will laod the components 
+
+10. commands
+
+// typescript.org
+// https://github.com/synergy/2411/soc-gen-app
+// npm install @angular.cli@1.7 -g - to install node
+// ng new soc-gen-app
+// ng serve 
+// ng generate compoment 'component_name' -- create component
+// ng generate service 'service name'
+// ng generate directive 'directive name'
+// npm i bootstrap@3 --save  --> install bootstrap for styling
+// npm install firebase --save
+11. Adding components 
+      2 types : (Smart component,Dump component )
+      Ex : root component comes under smart compoment
+12. Property binding (Component to view use [])
+13. Event binding (view to component use ())
+14. Property + event binding is called 2 way binding [()]
+15. Data Projection
+16. ng-content -> to load the information inside the selector <app-root>Welcome</app-root>
+17. Component Life cycle
+        ngOnChanges -  called when an input binding value ngOnChanges 
+        ngOnInit - after thje first ngOnChanges
+        ngDoCheck - after every run  of change deduction
+        ngAfterContentInit - 
+        ngAfterContentChecked
+        ngAfterViewInit
+        ngAfterViewChecked
+        ngOnDestroy - 
+          // All check events will always fire when there is the change
+        Constructor is not the part of life cycle
+18.Best place to initialize the object is ngOnInit, 
+   When we put this in costructor, each and every time we load the component, object creation happens again and again
+19. Directives  -modifies the DOM to change appearance, behaviour, layout
+     Component directive - directive with template
+     Structural directive - (ngFor,ngIf (elsetemplate is also defined),ngSwitch)
+      this needs * infront
+     Attribute directive - (ngclass , ngstyle)
+
+10. If we are going for property binding, use  [] for properties, value should be within "''"
+11. Creating custom diretive (HighLight Directive,Unless directive) , hostListener
+12. Pipes -format Data 
+    Built in Pipes (currency,date,uppercase,number,json,percent,async)
+    Custom pipes
+13. Promise -> helps to handle situations when the service takes times to laod the data
+    It has 2 states , resolve and reject
+14. Forms
+     Template Driven Forms (Login component)
+       - angular infers the Form object from the DOM, App logic resides inside template
+     Model Driven Forms(Reactive forms) (register component)
+       - form is created and sync with DOM
+       - App logic resides inside the compoment
+       - use of formcontrol, formgroup, formbuilder
+15. DI & Services
+       Angular's DI system is controlled through @NgModule
+       Services are ES6 classes, registered with angular app using providers
+       Services are singleton
+       Hierarchical Injections
+         if the service is injected in root module-  same instance of service will be
+           available through the full application
+         if the service is injected in root compoment - same instance of service is available  
+           for all components
+         if the service is injected in other component - same instance of service will be 
+            available for this component and its child component.
+
+16. Creating Services
+17. Observables and Promise
+18. Interceptor
+19. Routing, routing inside routing, pass parameters from one compoment to another 
+20. Modules , Custom Module
+21. Lazy loading Modules
